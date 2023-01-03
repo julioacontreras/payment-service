@@ -1,0 +1,22 @@
+# ignore dependencies
+node_modules/
+
+# ignore distribution
+dist/
+
+# ignore all logs
+*.log
+
+.env
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+#apidoc
+documentation
