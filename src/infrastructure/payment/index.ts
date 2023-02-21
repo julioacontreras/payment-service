@@ -1,4 +1,4 @@
 import { setPayment } from '@/adapters/payment'
-import { payment } from './fake' 
+import { payment } from './paypal' 
 
 setPayment(payment)

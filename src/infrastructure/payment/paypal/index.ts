@@ -1,18 +1,14 @@
-import { sendMoney } from './paypal'
+import { pay } from './paypal'
+import { Application } from '../../../adapters/payment/types/application'
+import { Order } from '../../../adapters/payment/types/order'
+import { User } from '../../../adapters/payment/types/user'
 
 export const payment = {
-  send: (
-    title: string,
-    price: string,
-    quantity: number,
-    currency: string,
-  ) => {
-    return sendMoney(title, price, quantity, currency)
-  },
-  getMethodPayment: (accountId: string) => {
-    return {}
-  },
-  getMethodPayments: (userId: string) => {
-    return {}
-  },
+  createOrder: (
+    order: Order,
+    user: User,
+    application: Application   
+  ): Promise<any> => {
+    return pay(order, user, application)
+  }
 }

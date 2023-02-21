@@ -1,4 +1,4 @@
-import { Payment } from './types'
+import { Payment } from './types/payment'
 
 export let payment: Payment
 

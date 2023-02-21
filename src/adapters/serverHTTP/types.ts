@@ -1,3 +1,5 @@
+import { HTTPMethods } from ".";
+
 export type UseCaseName = string
 
 export type HTTPResponse = unknown;
@@ -19,13 +21,13 @@ export type HTTPRequest = {
  *  Use case function. Here have use case instructions to be executed.
  *  
  */
-export type UseCaseFunction = (settings: unknown) => Promise<HTTPReturn> | HTTPReturn;
+export type UseCaseFunction = (settings: any) => Promise<HTTPReturn> | HTTPReturn;
 
 /** @type UseCaseRoute
  *  Use case settings. Here have function and route to each use case.
  *  
  */
-export type UseCaseRoute = { useCase: UseCaseFunction, route: string  }
+export type UseCaseRoute = { useCase: UseCaseFunction, route: string, method: HTTPMethods  }
 
 /** @type UseCaseMap
  *  Contain use cases to execute in server. Each route hace one use case.

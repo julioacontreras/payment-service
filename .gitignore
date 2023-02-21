@@ -7,7 +7,7 @@ dist/
 # ignore all logs
 *.log
 
-.env
+.env.*
 
 # Editor directories and files
 .idea
