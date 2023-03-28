@@ -23,7 +23,7 @@ export function startServer (useCases: UseCaseMap): void {
   // -------------------------
   //   start server
   // -------------------------
-  const port = process.env.PORT
+  const port = process.env.PAYPAL_SERVICE_PORT
   if (!port) {
     throw 'Dont have port selected in server'
   }
